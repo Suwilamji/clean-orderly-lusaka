@@ -1,127 +1,242 @@
-﻿# Clean & Orderly Lusaka
+﻿@"
 
-A civic tech platform for identifying and tracking urban issues in sanitation, traffic, and city management.
+\# Clean \& Orderly Lusaka
 
-## Project Goals
 
-- **Identify Problem Areas**: Crowdsource data on sanitation issues, traffic congestion, and urban management challenges
-- **Promote Civic Engagement**: Provide a neutral platform for citizens to report and track civic issues
-- **Data-Driven Insights**: Generate actionable data for community organizations and local authorities
-- **Transparent Tracking**: Allow public monitoring of reported issues and their resolution status
 
-## Technology Stack
+A civic tech platform for identifying and tracking urban issues in sanitation, traffic, and city management across Lusaka.
 
-### Backend
-- **Django** (Python) - REST API
-- **Django REST Framework** - API development
-- **PostgreSQL** - Database
-- **Redis** - Caching (optional)
 
-### Frontend
-- **Next.js** (React) - Web interface
-- **Tailwind CSS** - Styling
-- **Leaflet/Mapbox** - Interactive maps
-- **Axios** - API communication
 
-### DevOps
-- **Docker** - Containerization
-- **Nginx** - Web server
-- **Gunicorn** - WSGI server
+\## About
 
-## Getting Started
 
-### Prerequisites
-- Python 3.9+ and pip
-- Node.js 18+ and npm/yarn
-- PostgreSQL 14+
-- Git
 
-### Installation
+Instead of just complaining about urban problems, report and track them. Clean \& Orderly Lusaka lets citizens document issues, visualize problem areas on a map, and monitor resolution progress — turning civic concern into actionable data.
 
-#### 1. Clone the repository
-\\\ash
-git clone https://github.com/Suwilamji/clean-orderly-lusaka.git
-cd clean-orderly-lusaka
-\\\
 
-#### 2. Set up Backend (Django)
-\\\ash
-cd backend
-python -m venv venv
-# On Windows:
-venv\Scripts\activate
-# On Mac/Linux:
-source venv/bin/activate
 
-pip install -r requirements.txt
-cp .env.example .env
-# Edit .env with your database settings
+\*\*Mission:\*\* Transform urban management through community-driven data collection and transparent issue tracking.
 
-python manage.py migrate
-python manage.py createsuperuser
-python manage.py runserver
-\\\
 
-#### 3. Set up Frontend (Next.js)
-\\\ash
-cd ../frontend
-npm install
-cp .env.local.example .env.local
-# Edit .env.local with your API URL
 
-npm run dev
-\\\
+\## Features
 
-#### 4. Access the application
-- Backend API: http://localhost:8000
-- Frontend: http://localhost:3000
-- Admin panel: http://localhost:8000/admin
 
-## Features
 
-### Phase 1
-- [x] Django REST API setup
-- [x] Next.js frontend structure
-- [ ] User authentication (JWT)
-- [ ] Issue reporting form
-- [ ] Interactive map with markers
+\- \*\*Issue Reporting\*\* — Submit sanitation, traffic, or infrastructure problems with photos
 
-### Phase 2
-- [ ] Photo upload for issues
-- [ ] Issue status tracking
-- [ ] Email/SMS notifications
-- [ ] Admin dashboard
+\- \*\*Interactive Map\*\* — Visualize reported issues across Lusaka neighborhoods  
 
-### Future
-- [ ] Mobile app (React Native)
-- [ ] Real-time updates (WebSockets)
-- [ ] Data analytics dashboard
-- [ ] Public API for developers
+\- \*\*Status Tracking\*\* — Follow issue resolution from reported to resolved
 
-## Database Schema (PostgreSQL)
+\- \*\*Data Dashboard\*\* — View statistics and trends in urban management
 
-\\\sql
--- Example tables
--- Users, Issues, Categories, Comments, StatusUpdates
-\\\
 
-## Contributing
 
-We welcome contributions! Please see \CONTRIBUTING.md\ for guidelines.
+\## Tech Stack
 
-1. Fork the repository
-2. Create a feature branch (\git checkout -b feature/improvement\)
-3. Commit changes (\git commit -m 'Add some improvement'\)
-4. Push to branch (\git push origin feature/improvement\)
-5. Open a Pull Request
 
-## Contact
 
-**Project Lead**: Suwilanji Sinyangwe
-- **Phone**: +86 1850 7916 548
-- **Email**: sinyangwesuwilanji530@gmail.com
-- **GitHub**: [@Suwilamji](https://github.com/Suwilamji)
+\### Backend
 
-## License
+\- Django — Python web framework
 
-This project is open for community use and collaboration.
+\- Django REST Framework — API development
+
+\- PostgreSQL — Database
+
+\- Redis — Caching
+
+
+
+\### Frontend
+
+\- Next.js — React framework
+
+\- Tailwind CSS — Styling
+
+\- Leaflet/Mapbox — Interactive maps
+
+
+
+\### Deployment
+
+\- Docker — Containerization
+
+\- Nginx — Web server
+
+\- Gunicorn — WSGI server
+
+
+
+\## Getting Started
+
+
+
+\### Prerequisites
+
+\- Python 3.9+
+
+\- Node.js 18+
+
+\- PostgreSQL 14+
+
+\- Git
+
+
+
+\### Installation
+
+
+
+1\. \*\*Clone the repository\*\*
+
+&nbsp;  \\`\\`\\`bash
+
+&nbsp;  git clone https://github.com/Suwilamji/clean-orderly-lusaka.git
+
+&nbsp;  cd clean-orderly-lusaka
+
+&nbsp;  \\`\\`\\`
+
+
+
+2\. \*\*Set up Backend\*\*
+
+&nbsp;  \\`\\`\\`bash
+
+&nbsp;  cd backend
+
+&nbsp;  python -m venv venv
+
+&nbsp;  venv\\Scripts\\activate  # Windows
+
+&nbsp;  pip install -r requirements.txt
+
+&nbsp;  python manage.py migrate
+
+&nbsp;  python manage.py runserver
+
+&nbsp;  \\`\\`\\`
+
+
+
+3\. \*\*Set up Frontend\*\*
+
+&nbsp;  \\`\\`\\`bash
+
+&nbsp;  cd ../frontend
+
+&nbsp;  npm install
+
+&nbsp;  npm run dev
+
+&nbsp;  \\`\\`\\`
+
+
+
+4\. \*\*Access the application\*\*
+
+&nbsp;  - Frontend: http://localhost:3000
+
+&nbsp;  - Backend API: http://localhost:8000
+
+&nbsp;  - Admin: http://localhost:8000/admin
+
+
+
+\## Project Structure
+
+
+
+\\`\\`\\`
+
+clean-orderly-lusaka/
+
+├── backend/          # Django API server
+
+│   ├── config/      # Django settings
+
+│   ├── reports/     # Issue reporting app
+
+│   ├── manage.py
+
+│   └── requirements.txt
+
+├── frontend/        # Next.js web interface
+
+│   ├── pages/       # Next.js pages
+
+│   ├── components/  # React components
+
+│   ├── styles/      # CSS/Tailwind
+
+│   └── package.json
+
+├── docs/            # Documentation
+
+├── README.md        # This file
+
+└── .gitignore       # Git ignore rules
+
+\\`\\`\\`
+
+
+
+\## Civic Context
+
+
+
+Clean \& Orderly Lusaka addresses:
+
+\- \*\*Sanitation\*\* — Overflowing bins, illegal dumping, drainage issues
+
+\- \*\*Traffic\*\* — Congestion, road damage, missing signage  
+
+\- \*\*Urban Management\*\* — Street lighting, public space maintenance, infrastructure
+
+
+
+By documenting issues systematically, we create data that can:
+
+1\. Inform municipal planning
+
+2\. Prioritize resource allocation
+
+3\. Measure improvement over time
+
+4\. Engage citizens in urban stewardship
+
+
+
+\## Team
+
+
+
+\- \*\*Suwilanji Sinyangwe\*\* — Project Lead \& Full-Stack Development
+
+\- \*\*Contributors Welcome\*\* — Join us in building civic tech for Lusaka
+
+
+
+\## Contact
+
+
+
+\- \*\*Phone\*\*: +86 1850 7916 548
+
+\- \*\*Email\*\*: sinyangwesuwilanji530@gmail.com
+
+\- \*\*GitHub\*\*: \[@Suwilamji](https://github.com/Suwilamji)
+
+
+
+\## License
+
+
+
+Open for community use and collaboration.
+
+"@ | Out-File README.md -Encoding UTF8
+
