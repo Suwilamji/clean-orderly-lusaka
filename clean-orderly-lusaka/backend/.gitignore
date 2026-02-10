@@ -1,0 +1,14 @@
+__pycache__/
+.env
+venv/
+
+# Django
+db.sqlite3
+media/
+
+# Node
+node_modules/
+.next/
+
+# OS
+.DS_Store
